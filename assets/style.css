@@ -1,0 +1,344 @@
+* {
+        overflow-x: hidden;
+}
+
+/* Typography */
+
+/* h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    size: 80px;
+} */
+
+/* h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    size: 36px;
+} */
+
+/* h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    size: 1.5rem;
+} */
+
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 56px;
+}
+
+h3 {
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+body p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    size: 18px;
+}
+
+.small {
+    font-family: 'Open Sans', sans-serif;
+    size: 14px;
+}
+
+/* Primary Button */
+
+.btn-warning {
+    font-weight: 900;
+    background-image: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+    border-radius: 4px;
+    width: 260px;
+    height: 60px;
+    color: #1A1917;
+}
+
+/* Navigation */
+
+.nav a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    size: 80px;
+    text-transform: capitalize;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* HERO */
+
+#hero {
+    background-image: url("images/bg-main.png");
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    width: 100vw;
+}
+
+#hero::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+  }
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+#hero div.container {
+    position: relative;
+    z-index: 1;
+    padding-top: 15vh;
+} 
+
+.scroll {
+    margin-top: 15vh;
+}
+
+.scroll-text{
+    font-size: 12px;
+}
+
+/* About */
+
+#about {
+    background-image: url("images/bg-about.png");
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+}
+
+#about::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15,15,15,0.9);
+    background-image: radial-gradient(136.03% 54.57% at 50% 48.04%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 60.63%, #080A0B 99.74%);
+    position: absolute;
+    bottom: 0; 
+}
+
+#about div.container {
+    position: relative;
+    z-index: 1;
+    
+}
+
+ol.carousel-indicators li {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+
+/* Feature */
+
+#feature {
+    background-image: url("images/bg-feature.png");
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 960px;
+}
+
+#feature::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(50% 80% at 30% 55%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 19.2%, rgba(4, 5, 6, 0.520671) 47.48%, #080A0B 99.74%);
+    position: absolute;
+    bottom: 0; 
+}
+
+#feature-content {
+    margin-top: 25vh;
+    position: relative;
+    z-index: 1;
+}
+
+ul.feature-list {
+    list-style-type: none;
+    padding: 0 20px;
+}
+
+li.feature-li {
+    /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+    position: relative;
+    /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+    margin-left: 20px;
+    padding-bottom: 1em;
+    padding-left: 20px;
+    color: #FFB548;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    line-height:1.5rem;
+}
+
+/* First Bullet*/
+li.feature-li:first-child:after {
+    content: '';
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' viewBox='0 0 32 32' focusable='false'%3E%3Ccircle stroke='white' fill='white' cx='16' cy='16' r='10'%3E%3C/circle%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -4px;
+    top: 0;
+    width: 22px;
+    height: 22px;
+}
+
+/* List Connector */
+li.feature-li:first-child::before {
+    background-color: white;
+    width: 2px;
+    content: '';
+    position: absolute;
+    top: 12px;
+    bottom: 0px;
+    left: 6px;
+}
+
+/* Stop the line short on the final list item */
+li:last-child:before { height: 24px;}
+
+/* Child Bullets */
+li.feature-li:nth-child(2)::after, li.feature-li:nth-child(3)::after {
+    content: '';
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' viewBox='0 0 32 32' focusable='false'%3E%3Ccircle stroke='white' fill='none' cx='16' cy='16' r='10'%3E%3C/circle%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -4px;
+    top: -3px;
+    width: 22px;
+    height: 22px;
+}
+
+li.feature-li:nth-child(2), li.feature-li:nth-child(3) {
+    line-height: 20px;
+}
+
+.small {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    size: 18px;
+    line-height: 22px;
+}
+
+/* System Requirement */
+#sys-req{
+    background-image: url("images/bg-sys-req.png");
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 960px;
+}
+
+#sys-req:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(33.26% 45% at 64.32% 47.1%, rgba(255, 255, 255, 0) 3.36%, rgba(0, 0, 0, 0) 19.22%, #080A0B 99.74%);
+    position: absolute;
+    bottom: 0; 
+}
+
+#sys-req .container{
+    position: relative;
+    z-index: 1;
+}
+
+.sys-req-title p{
+    position: relative;
+    z-index: 1;
+}
+
+table.table-bordered{
+    border:1px solid gray;
+    margin-top:20px;
+}
+
+table.table-bordered > tbody > tr > td{
+    border:1px solid rgba(151,151,151, 0.1);
+}
+
+table .title {
+    color: #FFB548
+}
+
+
+/* Top Scores */
+#top-score {
+    background-image: url("images/bg-top-score.png");
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 960px;
+}
+
+.card {
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    color: white;
+
+}
+
+div#score {
+    margin-top: 200px;
+    padding-top: 100px;
+}
+
+.player-name {
+    color:  #FFB548;
+}
+
+.img-player {
+    position: relative;
+    border-radius: 50%;
+    top:-3px;
+    left: -5px;
+    height: 80px;
+    width: 80px;
+}
+
+.bg-img {
+    background-color: #FFB548;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Subscribe */
+
+#subscribe, footer {
+    background-color: #080A0B;
+}
+
+input[type=text]{
+    background-color: #1A1B1B;
+    border: 2px solid #080A0B;
+}
+
+footer {
+    width: 100vw;
+}
