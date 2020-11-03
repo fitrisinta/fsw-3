@@ -342,3 +342,11 @@ input[type=text]{
 footer {
     width: 100vw;
 }
+
+h6 a {
+    color: white !important;
+}
+
+hr {
+    border: 1px solid rgb(202, 196, 196)
+}
